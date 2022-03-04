@@ -12,10 +12,7 @@ const routes = require("./routes/api");
 const MONGODB_URI =
   "mongodb+srv://jayamiko:qwerty114@coviddb.zl5n4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-mongoose.connect(MONGODB_URI || "mongodb://localhost/covid", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(MONGODB_URI || "mongodb://localhost/covid");
 
 mongoose.connection.on("connected", () => {
   console.log("Mongoose is connected!!!!");
