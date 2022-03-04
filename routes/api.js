@@ -6,13 +6,15 @@ const CovidPost = require("../models/covid");
 
 // Routes
 router.get("/", (req, res) => {
+  let data = "https://data.covid19.go.id/public/api/update.json";
   CovidPost.find({})
     .then((data) => {
-      console.log("Data: ", data);
       res.json(data);
+      console.log("Data: ", data);
     })
     .catch((error) => {
       console.log("error: ", error);
+      throw error;
     });
 });
 
@@ -29,9 +31,9 @@ router.post("/save", (req, res) => {
   newCovidPost.save((error) => {
     if (error) {
       res.status(500).json({msg: "Sorry, internal server errors"});
+      throw error;
       return;
     }
-    // BlogPost
     return res.json({
       msg: "Your data has been saved!!!!!!",
     });
