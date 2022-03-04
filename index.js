@@ -5,14 +5,13 @@ const morgan = require("morgan");
 const path = require("path");
 
 const app = express();
-const PORT = 8080; // Step 1
+const PORT = 8080;
 
 const routes = require("./routes/api");
 
 const MONGODB_URI =
   "mongodb+srv://jayamiko:qwerty114@coviddb.zl5n4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
-// Step 2
 mongoose.connect(MONGODB_URI || "mongodb://localhost/covid", {
   useNewUrlParser: true,
   useUnifiedTopology: true,

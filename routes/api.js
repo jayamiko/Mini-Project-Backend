@@ -18,9 +18,10 @@ router.get("/", (req, res) => {
 
 router.post("/save", (req, res) => {
   const data = {
-    title: "TITLE",
-    body: "BODY",
-    date: "2022-12-12",
+    jumlah_positif: 100,
+    jumlah_sembuh: 100,
+    jumlah_meninggal: 100,
+    jumlah_dirawatif: 100,
   };
 
   const newCovidPost = new CovidPost(data);
