@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 // Schema
 const Schema = mongoose.Schema;
-const BlogPostSchema = new Schema({
+const CovidPostSchema = new Schema({
   jumlah_positif: Number,
   jumlah_sembuh: Number,
   jumlah_meninggal: Number,
