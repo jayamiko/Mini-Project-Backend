@@ -2,17 +2,17 @@ const express = require("express");
 
 const router = express.Router();
 
-const BlogPost = require("../models/covid");
+const CovidPost = require("../models/covid");
 
 // Routes
 router.get("/", (req, res) => {
-  BlogPost.find({})
+  CovidPost.find({})
     .then((data) => {
       console.log("Data: ", data);
       res.json(data);
     })
     .catch((error) => {
-      console.log("error: ", daerrorta);
+      console.log("error: ", error);
     });
 });
 
@@ -22,12 +22,10 @@ router.post("/save", (req, res) => {
     body: "BODY",
     date: "2022-12-12",
   };
-  console.log(data);
 
-  const newBlogPost = new BlogPost(data);
+  const newCovidPost = new CovidPost(data);
 
-  newBlogPost.save((error) => {
-    console.log("masul");
+  newCovidPost.save((error) => {
     if (error) {
       res.status(500).json({msg: "Sorry, internal server errors"});
       return;
@@ -37,14 +35,6 @@ router.post("/save", (req, res) => {
       msg: "Your data has been saved!!!!!!",
     });
   });
-});
-
-router.get("/name", (req, res) => {
-  const data = {
-    username: "peterson",
-    age: 5,
-  };
-  res.json(data);
 });
 
 module.exports = router;

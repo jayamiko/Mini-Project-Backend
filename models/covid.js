@@ -3,15 +3,21 @@ const mongoose = require("mongoose");
 // Schema
 const Schema = mongoose.Schema;
 const BlogPostSchema = new Schema({
-  title: String,
-  body: String,
+  jumlah_positif: Number,
+  jumlah_sembuh: Number,
+  jumlah_meninggal: Number,
+  jumlah_dirawatif: Number,
   date: {
     type: String,
+    default: Date.now(),
+  },
+  created: {
+    type: Date,
     default: Date.now(),
   },
 });
 
 // Model
-const BlogPost = mongoose.model("BlogPost", BlogPostSchema);
+const CovidPost = mongoose.model("CovidPost", CovidPostSchema);
 
-module.exports = BlogPost;
+module.exports = CovidPost;
