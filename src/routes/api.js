@@ -1,10 +1,11 @@
-const express = require("express");
+import express from "express";
 const router = express.Router();
 
-const {getCovid, addCovid} = require("../controllers/covids");
+const {getData, addCovid, fetchAPI} = require("../controllers/covid");
 
 // Route User
-router.get("/covids", getCovid);
-router.post("/covid", addCovid);
+router.get("/covids", getData);
+router.get("/save", fetchAPI);
+router.get("/covid", addCovid);
 
-module.exports = router;
+export default router;
