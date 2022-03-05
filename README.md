@@ -31,23 +31,23 @@
 
 ### Installation && How to use
 
-1. Download MongoDB at `https://www.mongodb.com/try/download/community`
-1. Installation guide MongoDB, look here `https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/` (for Windows)
-1. Don't forget to turn on the MongoDB service
-1. Create a database first
-1. Clone repo `https://github.com/jayamiko/Mini-Project-Backend.git`
-1. Install all depedencies
+- Download MongoDB at `https://www.mongodb.com/try/download/community`
+- Installation guide MongoDB, look here `https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/` (for Windows)
+- Don't forget to turn on the MongoDB service
+- Create a database first
+- Clone repo `https://github.com/jayamiko/Mini-Project-Backend.git`
+- Install all depedencies
 
 ```sh
 npm install
 ```
 
-1. run the project
+- Run the project
 
 ```sh
 npm start
 ```
 
-1. Do restAPI using Postman or Thunder Client or something else
-1. Use `http://localhost:5000/api/v1/` + pathname you want to use
-1. Here you can get data and add data. And add auto data every 11.59 PM
+- Do restAPI using Postman or Thunder Client or something else
+- Use `http://localhost:5000/api/v1/` + pathname you want to use
+- Here you can get data and add data. And add auto data every 11.59 PM
